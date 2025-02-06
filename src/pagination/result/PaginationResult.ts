@@ -25,3 +25,16 @@ export class PaginationResult<Result extends unknown[] = unknown[]>
 		return { ...this, page: (this.page || 0) + 1 };
 	}
 }
+export interface PaginationResult2<Result extends unknown[] = unknown[]>
+	extends IPaginationResult<Result>
+{
+	totalPages: number;
+	hasNextPage: boolean;
+	hasPrevPage: boolean;
+	count: number;
+	exceedCount: boolean;
+	exceedTotalPages: boolean;
+	page: number;
+	limit: number;
+	result: Result 
+}

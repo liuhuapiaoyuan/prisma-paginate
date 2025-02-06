@@ -1,10 +1,10 @@
 import { Prisma } from "@prisma/client";
 import { Utils } from "../Utils";
-import { PaginationResult } from "../pagination/result/PaginationResult";
 import { Pagination } from "../pagination/Pagination";
-import { PrismaPaginateResult } from "./PrismaPaginateResult";
-import { PrismaFindManyArgs } from "./PrismaFindManyArgs";
+import { PaginationResult } from "../pagination/result/PaginationResult";
 import { IPrismaPaginate } from "./IPrismaPaginate";
+import { PrismaFindManyArgs } from "./PrismaFindManyArgs";
+import { PrismaPaginateResult2 } from "./PrismaPaginateResult";
 import { PrismaPaginationArgs } from "./PrismaPaginationArgs";
 
 export class PrismaPaginate<Model, Args> {
@@ -57,7 +57,7 @@ export class PrismaPaginate<Model, Args> {
 		this: Model,
 		args: PrismaFindManyArgs<Model, Args> & PrismaPaginationArgs,
 		paginationArgs?: PrismaPaginationArgs,
-	): PrismaPaginateResult<Model, Args> {
+	): PrismaPaginateResult2<Model, Args> {
 		const paginateExtension = new PrismaPaginate<Model, Args>(
 			this,
 			args,
@@ -68,7 +68,7 @@ export class PrismaPaginate<Model, Args> {
 		if (paginateExtension.args.onCount)
 			await paginateExtension.args.onCount(pagination);
 		pagination.result = await paginateExtension.findMany();
-		return pagination;
+		return pagination.toJSON();
 	}
 
 	static extension: IPrismaPaginate =
