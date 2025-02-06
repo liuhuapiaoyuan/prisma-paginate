@@ -1,5 +1,5 @@
-import { PrismaPaginateResult } from "./PrismaPaginateResult";
 import { PrismaFindManyArgs } from "./PrismaFindManyArgs";
+import { PrismaPaginateResult2 } from "./PrismaPaginateResult";
 import { PrismaPaginationArgs } from "./PrismaPaginationArgs";
 
 export interface IPrismaPaginate {
@@ -9,12 +9,12 @@ export interface IPrismaPaginate {
 			paginate<Model, Args>(
 				this: Model,
 				args: PrismaFindManyArgs<Model, Args> & PrismaPaginationArgs,
-			): PrismaPaginateResult<Model, Args>;
+			): PrismaPaginateResult2<Model, Args>;
 			paginate<Model, Args>(
 				this: Model,
 				args: PrismaFindManyArgs<Model, Args>,
 				paginationArgs: PrismaPaginationArgs,
-			): PrismaPaginateResult<Model, Args>;
+			): PrismaPaginateResult2<Model, Args>;
 		};
 	};
 }

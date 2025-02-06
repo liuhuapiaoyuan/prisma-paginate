@@ -1,6 +1,6 @@
 {
 	"name": "@liuhuapiaoyuan/prisma-paginate",
-	"version": "0.2.1",
+	"version": "0.0.1",
 	"description": "Paginate ORM Prisma",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -22,14 +22,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sandrewTx08/prisma-paginate.git"
+		"url": "https://github.com/liuhuapiaoyuan/prisma-paginate.git"
 	},
-	"author": "sandrewTx08",
+	"author": "liuhuapiaoyuan",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/sandrewTx08/prisma-paginate/issues"
+		"url": "https://github.com/liuhuapiaoyuan/prisma-paginate/issues"
 	},
-	"homepage": "https://github.com/sandrewTx08/prisma-paginate#readme",
+	"homepage": "https://github.com/liuhuapiaoyuan/prisma-paginate#readme",
 	"devDependencies": {
 		"@prisma/client": ">=5.7.1",
 		"@types/jest": "^29.5.14",
@@ -46,5 +46,9 @@
 	"peerDependencies": {
 		"@prisma/client": ">=4.9.0",
 		"prisma": ">=4.9.0"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
 	}
 }
