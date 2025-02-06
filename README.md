@@ -1,6 +1,6 @@
 # 📖 prisma-paginate
 
-| [![npm version](https://badge.fury.io/js/prisma-paginate.svg)](https://badge.fury.io/js/prisma-paginate) | [![CI](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/ci.yaml/badge.svg)](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/ci.yaml) | [![pages-build-deployment](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/pages/pages-build-deployment) |
+| [![npm version](https://badge.fury.io/js/prisma-paginate.svg)](https://www.npmjs.com/package/@liuhuapiaoyuan/prisma-paginate) | [![CI](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/ci.yaml/badge.svg)](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/ci.yaml) | [![pages-build-deployment](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/sandrewTx08/prisma-paginate/actions/workflows/pages/pages-build-deployment) |
 | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 
@@ -11,8 +11,8 @@
 # Install
 
 ```shell
-npm i prisma@>=4.9.0 @prisma/client@>=4.9.0 prisma-paginate@latest
-yarn add prisma@>=4.9.0 @prisma/client@>=4.9.0 prisma-paginate@latest
+npm i prisma@>=4.9.0 @prisma/client@>=4.9.0 @liuhuapiaoyuan/prisma-paginate@latest
+yarn add prisma@>=4.9.0 @prisma/client@>=4.9.0 @liuhuapiaoyuan/prisma-paginate@latest
 ```
 
 **`prisma/schema.prisma`**:
@@ -20,7 +20,6 @@ yarn add prisma@>=4.9.0 @prisma/client@>=4.9.0 prisma-paginate@latest
 ```ts
 generator client {
   provider      = "prisma-client-js"
-  previewFeatures = ["clientExtensions"]
 }
 ```
 
@@ -37,7 +36,7 @@ http://sandrewtx08.github.io/prisma-paginate/
 ```js
 // ESM
 import { PrismaClient } from "@prisma/client";
-import extension from "prisma-paginate";
+import {extension} from "@liuhuapiaoyuan/prisma-paginate";
 
 // Commonjs
 const { PrismaClient } = require("@prisma/client");
